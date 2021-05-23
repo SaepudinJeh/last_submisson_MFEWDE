@@ -1,5 +1,11 @@
 import "regenerator-runtime";
 
 import "../styles/styles.css";
+import App from "./views/app";
 
-console.log("wkwkwkw");
+const app = new App({
+    menuButton: document.querySelector(".menu-btn"),
+    closeButton: document.querySelector(".close-btn"),
+    menuList: document.querySelector(".menu-list"),
+    menuContent: document.querySelector("#mainContent")
+})
