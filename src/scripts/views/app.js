@@ -1,4 +1,6 @@
 import DrawerInitiator from "../utils/drawer-initiator";
+import UrlParser from "../routes/url-parser";
+import routes from "../routes/routes";
 
 class App {
     constructor({ menuButton, closeButton, menuList, menuContent }) {
@@ -17,6 +19,15 @@ class App {
             menuList: this._menuList,
             menuContent: this._menuContent,
         })
+    }
+
+    async renderPage() {
+        const url = UrlParser.parseActiveUrlWithCombiner();
+        const page = routes[url];
+        console.log(page);
+        console.log(url);
+        this._menuContent.innerHTML = await page.render();
+        await page.afterRender();
     }
 };
 

@@ -8,4 +8,12 @@ const app = new App({
     closeButton: document.querySelector(".close-btn"),
     menuList: document.querySelector(".menu-list"),
     menuContent: document.querySelector("#mainContent")
-})
+});
+
+window.addEventListener("hashchange", () => {
+    app.renderPage();
+});
+
+window.addEventListener("load", () => {
+    app.renderPage();
+});
