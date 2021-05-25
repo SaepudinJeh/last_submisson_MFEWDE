@@ -10,7 +10,7 @@ const createCulinaryTemplate = (culinary) => `
         <div class="card-info">
             <h3>Rating: ${culinary.rating}</h3>
             <a href="#/detail-menu/${culinary.id}">${culinary.name}</a>
-            <p>${culinary.description.substring(0, 150)}</p>
+            <p>${culinary.description.substring(0, 130)}</p>
         </div>
     </div>
 `;

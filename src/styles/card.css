@@ -14,14 +14,13 @@
   margin-bottom: 20px;
   cursor: pointer;
   margin: 10px auto;
+  overflow: hidden;
 }
 
 .card-image > img {
   width: 100%;
   height: 250px;
   object-fit: center;
-  border-top-left-radius: 1.5em;
-  border-top-right-radius: 1.5em;
 }
 
 .card-image {
@@ -70,10 +69,6 @@
 
 @media screen and (min-width: 650px) {
   .card-list {
-    display: grid;
-    grid-gap: 1em;
-    margin: 15px auto;
-    grid-template-columns: repeat(1, 1fr);
     padding: 0 1px;
   }
 
@@ -114,19 +109,8 @@
   }
 
   .cards {
-    max-height: 300px;
+    max-height: 450px;
     overflow: hidden;
-  }
-
-  .card-info > p {
-    display: none;
-  }
-
-  .card-info > a {
-    font-weight: 700;
-    font-size: 20px;
-    padding: 7px 0;
-    margin-top: 5px;
   }
 
   .card-info {
