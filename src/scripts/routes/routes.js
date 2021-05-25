@@ -5,7 +5,7 @@ import SearchMenu from "../views/pages/search-menu";
 const routes = {
     "/": MenuList,
     "/menu-list": MenuList,
-    "/detail-menu": DetailMenu,
+    "/detail-menu/:id": DetailMenu,
     "/search": SearchMenu
 };
 

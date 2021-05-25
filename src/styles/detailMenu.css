@@ -1,0 +1,45 @@
+.culinary {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  font-weight: 500;
+}
+
+.culinary_content {
+  display: flex;
+}
+
+.culinary_content .culinary_poster {
+  width: 100%;
+  max-width: 600px;
+  height: 700px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.culinary_info .culinary_title {
+  padding: 10px 0;
+}
+
+.culinary_info h4 {
+  margin-bottom: 10px;
+}
+
+.culinary_info p {
+  font-size: 20px;
+  padding: 8px 0;
+}
+
+.culinary_description {
+  margin-top: 20px;
+}
+
+.culinary_description p {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.culinary_review {
+  margin-top: 20px;
+}

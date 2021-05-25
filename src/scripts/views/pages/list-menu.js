@@ -1,12 +1,20 @@
+import TheCulinarySource from "../../data/theculinary-source";
+import { createCulinaryTemplate} from "../templates/templates-creator";
+
 const MenuList = {
     async render() {
         return `
-            <h2>Menu list</h2>
+            <div class="card-list"></civ>
         `;
     },
 
     async afterRender() {
-
+        const culinarys = await TheCulinarySource.listMenu();
+        const culinaryContainer = document.querySelector(".card-list");
+        
+        culinarys.forEach(culinary => {
+            culinaryContainer.innerHTML += createCulinaryTemplate(culinary);
+        });
     },
 };
 
