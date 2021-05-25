@@ -1,11 +1,15 @@
 import UrlParser from "../../routes/url-parser";
 import TheCulinarySource from "../../data/theculinary-source";
-import { createCulinaryDetailTemplate } from "../templates/templates-creator";
+import { createCostumerReviewsTemplate, createCulinaryDetailTemplate } from "../templates/templates-creator";
 
 const DetailMenu = {
     async render() {
         return `
-            <h2 id="culinary" class="culinary"></h2>
+            <div class="culinary_container">
+                <div id="culinary"></div>
+                <h2>Reviews</h2>
+                <div id="costumer-reviews" class="costumer_reviews"></div>
+            </div>
         `;
     },
 
@@ -15,6 +19,12 @@ const DetailMenu = {
         console.log(culinary);
         const culinaryContainer = document.querySelector("#culinary");
         culinaryContainer.innerHTML = createCulinaryDetailTemplate(culinary);
+
+        const reviewContainer =  document.querySelector("#costumer-reviews");
+        
+        culinary.customerReviews.map(review => {
+            reviewContainer.innerHTML += createCostumerReviewsTemplate(review);
+        })
     },
 };
 

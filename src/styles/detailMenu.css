@@ -1,34 +1,32 @@
-.culinary {
+.culinary_container {
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
   font-weight: 500;
 }
 
+.culinary_container p,
+.culinary_content p,
+.culinary_menus span {
+  font-size: 18px;
+}
+
 .culinary_content {
-  display: flex;
+  display: block;
 }
 
 .culinary_content .culinary_poster {
   width: 100%;
-  max-width: 600px;
-  height: 700px;
   object-fit: cover;
-  margin-right: 20px;
   border-radius: 10px;
 }
 
 .culinary_info .culinary_title {
-  padding: 10px 0;
-}
-
-.culinary_info h4 {
-  margin-bottom: 10px;
-}
-
-.culinary_info p {
-  font-size: 20px;
   padding: 8px 0;
+}
+
+.culinary_info h3 {
+  padding: 10px 0;
 }
 
 .culinary_description {
@@ -36,10 +34,68 @@
 }
 
 .culinary_description p {
-  font-size: 20px;
   margin-top: 5px;
 }
 
-.culinary_review {
+/* List_menu */
+.culinary_menus {
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+.culinary_menus span {
+  padding-right: 3px;
+}
+
+/* Review */
+
+.culinary_container h2 {
   margin-top: 20px;
+}
+
+.culinary_container .costumer_reviews {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1em;
+}
+
+@media screen and (min-width: 750px) {
+  .culinary_content {
+    display: flex;
+  }
+
+  .culinary_content .culinary_poster {
+    max-width: 400px;
+    height: 600px;
+    margin-right: 20px;
+  }
+
+  .culinary_container p,
+  .culinary_content p,
+  .culinary_menus span {
+    font-size: 16px;
+  }
+
+  .culinary_container .costumer_reviews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .culinary_content .culinary_poster {
+    max-width: 400px;
+    height: 550px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .culinary_content .culinary_poster {
+    max-width: 500px;
+    height: 550px;
+  }
+
+  .culinary_container .costumer_reviews {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

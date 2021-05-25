@@ -82,7 +82,7 @@
   }
 
   .cards {
-    width: 100%;
+    width: 90%;
     max-width: 800px;
   }
 }
@@ -98,6 +98,10 @@
   .card-image > img {
     max-height: 300px;
   }
+
+  .cards {
+    max-width: 800px;
+  }
 }
 
 @media screen and (min-width: 850px) {
@@ -109,6 +113,15 @@
     max-height: 200px;
   }
 
+  .cards {
+    max-height: 300px;
+    overflow: hidden;
+  }
+
+  .card-info > p {
+    display: none;
+  }
+
   .card-info > a {
     font-weight: 700;
     font-size: 20px;
@@ -117,7 +130,7 @@
   }
 
   .card-info {
-    padding: 14px 18px;
+    padding: 10px 18px;
   }
 }
 
