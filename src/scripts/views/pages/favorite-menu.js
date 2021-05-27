@@ -5,13 +5,13 @@ const SearchMenu = {
     async render() {
         return `
             <h1 class="heading-menu">Menu Favorite</h1>
-            <div class="card-list"></div>
+            <div id="card-list"></div>
         `;
     },
 
     async afterRender() {
         const culinary = await FavoriteMenuIdb.getAllMenu();
-        const culinaryContainer = document.querySelector(".card-list");
+        const culinaryContainer = document.querySelector("#card-list");
         culinary.forEach(menu => {
             culinaryContainer.innerHTML += createCulinaryTemplate(menu);
         })
