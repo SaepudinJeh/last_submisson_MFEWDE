@@ -2,6 +2,7 @@ import UrlParser from "../../routes/url-parser";
 import TheCulinarySource from "../../data/theculinary-source";
 import { createCostumerReviewsTemplate, createCulinaryDetailTemplate } from "../templates/templates-creator";
 import { createLikeButtonTemplate, createLikedButtonTemplate} from "../templates/template-button";
+import LikeButtonInitiator from "../../utils/like-button-initiator";
 
 const DetailMenu = {
     async render() {
@@ -39,8 +40,10 @@ const DetailMenu = {
             reviewContainer.innerHTML += createCostumerReviewsTemplate(review);
         });
 
-        const likeButtonContainer = document.querySelector('#likeButtonContainer');
-        likeButtonContainer.innerHTML = createLikeButtonTemplate();
+        LikeButtonInitiator.init({
+            likeButtonContainer: document.querySelector("#likeButtonContainer"),
+            menu: culinary
+        })
     },
 };
 
