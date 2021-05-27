@@ -7,8 +7,10 @@ const DetailMenu = {
         return `
             <div class="culinary_container">
                 <div id="culinary"></div>
-                <h2>Reviews</h2>
-                <div id="costumer-reviews" class="costumer_reviews"></div>
+                <div class="review_container">
+                    <h2>Reviews</h2>
+                    <div id="costumer-reviews" class="costumer_reviews"></div>
+                </div>
             </div>
         `;
     },

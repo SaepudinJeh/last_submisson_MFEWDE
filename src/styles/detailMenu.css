@@ -1,8 +1,6 @@
 .culinary_container {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
-  font-weight: 500;
+  margin-top: 100px;
+  padding: 0 32px;
 }
 
 .culinary_container p,
@@ -13,6 +11,9 @@
 
 .culinary_content {
   display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .culinary_content .culinary_poster {
@@ -30,7 +31,10 @@
 }
 
 .culinary_description {
+  margin: 0 auto;
   margin-top: 20px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 .culinary_description p {
@@ -58,6 +62,12 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 1em;
+}
+
+.review_container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
 }
 
 @media screen and (min-width: 750px) {

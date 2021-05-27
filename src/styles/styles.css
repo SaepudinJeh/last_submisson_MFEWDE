@@ -2,6 +2,7 @@
 @import "./navbar.css";
 @import "./card.css";
 @import "./detailMenu.css";
+@import "./heroImage.css";
 
 * {
   margin: 0;
@@ -14,10 +15,4 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-main {
-  padding: 32px;
-  margin-top: 60px;
-  flex: 1;
 }

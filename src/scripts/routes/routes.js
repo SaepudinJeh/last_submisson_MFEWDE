@@ -6,7 +6,7 @@ const routes = {
     "/": MenuList,
     "/menu-list": MenuList,
     "/detail-menu/:id": DetailMenu,
-    "/search": SearchMenu
+    "/favorite": SearchMenu
 };
 
 export default routes;

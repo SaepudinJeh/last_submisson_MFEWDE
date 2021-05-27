@@ -4,7 +4,15 @@ import { createCulinaryTemplate} from "../templates/templates-creator";
 const MenuList = {
     async render() {
         return `
-            <div class="card-list"></civ>
+            <div class="hero-container">
+                <figure class="hero-image">
+                    <img src="images/hero-image.jpg" >
+                    <h1>Makan-makan Apps</h1>
+                    <h2>Makan sesukannya, bayar sesukannya</h2>
+                </figure>
+            </div>
+            <h1 class="heading-menu">Semua menu</h1>
+            <div class="card-list"></div>
         `;
     },
 

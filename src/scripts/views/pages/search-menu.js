@@ -1,12 +1,12 @@
 const SearchMenu = {
     async render() {
         return `
-            <h2>Search result</h2>
+            <h2>Favorite menu</h2>
         `;
     },
 
     async afterRender() {
-
+        console.log("Wkwkwkwk");
     },
 };
 
