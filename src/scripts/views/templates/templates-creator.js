@@ -17,6 +17,7 @@ const createCulinaryTemplate = (culinary) => `
 
 const foodLists = (culinary) => culinary.menus.foods.map(food => `<span>${food.name},</span>`).join(" ");
 const drinkLists = (culinary) => culinary.menus.drinks.map(drink => `<span>${drink.name},</span>`).join(" ");
+const categoryMenu = (culinary) => culinary.categories.map(category => `<span>${category.name},</span>`).join(" ");
 
 const createCulinaryDetailTemplate = (culinary) => `
 <div class="culinary_content">
@@ -43,6 +44,9 @@ const createCulinaryDetailTemplate = (culinary) => `
                 ${drinkLists(culinary)}
             </div>
         </div>
+
+        <h3>Category</h3>
+        <p>${categoryMenu(culinary)}</p>
     </div>
 </div>
 <div class="culinary_description">
