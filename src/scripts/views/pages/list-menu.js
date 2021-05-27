@@ -11,14 +11,14 @@ const MenuList = {
                     <h2>Makan sesukannya, bayar sesukannya</h2>
                 </figure>
             </div>
-            <h1 class="heading-menu">Semua menu</h1>
-            <div class="card-list"></div>
+            <h1 id="heading-menu">Semua menu</h1>
+            <div id="card-list"></div>
         `;
     },
 
     async afterRender() {
         const culinarys = await TheCulinarySource.listMenu();
-        const culinaryContainer = document.querySelector(".card-list");
+        const culinaryContainer = document.querySelector("#card-list");
         
         culinarys.forEach(culinary => {
             culinaryContainer.innerHTML += createCulinaryTemplate(culinary);

@@ -1,4 +1,4 @@
-.card-list {
+#card-list {
   display: grid;
   grid-gap: 1em;
   margin: 15px auto;
@@ -68,7 +68,7 @@
 }
 
 @media screen and (min-width: 650px) {
-  .card-list {
+  #card-list {
     margin-top: 40px;
   }
 
@@ -83,7 +83,7 @@
 }
 
 @media screen and (min-width: 750px) {
-  .card-list {
+  #card-list {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
   }
@@ -98,7 +98,7 @@
 }
 
 @media screen and (min-width: 850px) {
-  .card-list {
+  #card-list {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -117,13 +117,13 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .card-list {
+  #card-list {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media screen and (min-width: 1600px) {
-  .card-list {
+  #card-list {
     grid-template-columns: repeat(5, 1fr);
   }
 }
