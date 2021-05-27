@@ -6,7 +6,15 @@ const DetailMenu = {
     async render() {
         return `
             <div class="culinary_container">
-                <div id="culinary"></div>
+                <div id="culinary">
+                    <!-- Loader -->
+                    <loader>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </loader>
+                    <!-- Akhir Loader -->
+                </div>
                 <div class="review_container">
                     <h2>Reviews</h2>
                     <div id="costumer-reviews" class="costumer_reviews"></div>
