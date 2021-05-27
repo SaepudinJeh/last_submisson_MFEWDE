@@ -4,7 +4,7 @@ import { createCulinaryTemplate } from "../templates/templates-creator";
 const SearchMenu = {
     async render() {
         return `
-            <h1 class="heading-menu">Menu Favorite</h1>
+            <h1 id="heading-menu">Menu Favorite</h1>
             <div id="card-list"></div>
         `;
     },
