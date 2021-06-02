@@ -1,9 +1,9 @@
-import TheCulinarySource from "../../data/theculinary-source";
-import { createCulinaryTemplate} from "../templates/templates-creator";
+import TheCulinarySource from '../../data/theculinary-source'
+import { createCulinaryTemplate } from '../templates/templates-creator'
 
 const MenuList = {
-    async render() {
-        return `
+  async render () {
+    return `
             <div class="hero-container">
                 <figure class="hero-image">
                     <img src="images/hero-image.jpg" >
@@ -13,17 +13,17 @@ const MenuList = {
             </div>
             <h1 id="heading-menu">Semua menu</h1>
             <div id="card-list"></div>
-        `;
-    },
+        `
+  },
 
-    async afterRender() {
-        const culinarys = await TheCulinarySource.listMenu();
-        const culinaryContainer = document.querySelector("#card-list");
-        
-        culinarys.forEach(culinary => {
-            culinaryContainer.innerHTML += createCulinaryTemplate(culinary);
-        });
-    },
-};
+  async afterRender () {
+    const culinarys = await TheCulinarySource.listMenu()
+    const culinaryContainer = document.querySelector('#card-list')
 
-export default MenuList;
+    culinarys.forEach(culinary => {
+      culinaryContainer.innerHTML += createCulinaryTemplate(culinary)
+    })
+  }
+}
+
+export default MenuList

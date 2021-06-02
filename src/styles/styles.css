@@ -55,6 +55,20 @@ body {
 }
 /* Skip Content */
 
+/* Footer */
+footer {
+  width: 100%;
+  font-weight: lighter;
+  font-size: 15px;
+  text-align: center;
+  margin: 15px auto;
+}
+
+footer p {
+  padding: 20px 0;
+}
+/* Footer */
+
 loader {
   top: 50vh;
   left: 50%;

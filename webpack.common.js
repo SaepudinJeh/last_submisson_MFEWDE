@@ -1,7 +1,7 @@
 /* eslint-disable no-multi-spaces */
 const HtmlWebpackPlugin  = require('html-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const ServiceWorkerPlugin = require("serviceworker-webpack-plugin")
+const ServiceWorkerPlugin = require('serviceworker-webpack-plugin')
 const path = require('path')
 
 module.exports = {

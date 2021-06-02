@@ -1,4 +1,4 @@
-import CONFIG from "../../globals/config";
+import CONFIG from '../../globals/config'
 
 const createCulinaryTemplate = (culinary) => `
     <div class="cards">
@@ -13,11 +13,11 @@ const createCulinaryTemplate = (culinary) => `
             <p>${culinary.description.substring(0, 130)}</p>
         </div>
     </div>
-`;
+`
 
-const foodLists = (culinary) => culinary.menus.foods.map(food => `<span>${food.name},</span>`).join(" ");
-const drinkLists = (culinary) => culinary.menus.drinks.map(drink => `<span>${drink.name},</span>`).join(" ");
-const categoryMenu = (culinary) => culinary.categories.map(category => `<span>${category.name},</span>`).join(" ");
+const foodLists = (culinary) => culinary.menus.foods.map(food => `<span>${food.name},</span>`).join(' ')
+const drinkLists = (culinary) => culinary.menus.drinks.map(drink => `<span>${drink.name},</span>`).join(' ')
+const categoryMenu = (culinary) => culinary.categories.map(category => `<span>${category.name},</span>`).join(' ')
 
 const createCulinaryDetailTemplate = (culinary) => `
 <div class="culinary_content">
@@ -53,7 +53,7 @@ const createCulinaryDetailTemplate = (culinary) => `
     <h2>Deskripsi</h2>
     <p>${culinary.description}</p>
 </div>
-`;
+`
 
 const createCostumerReviewsTemplate = (review) => `
     <div>
@@ -61,6 +61,6 @@ const createCostumerReviewsTemplate = (review) => `
         <p>${review.review}</p>
         <span>${review.date}</span>
     </div>
-`;
+`
 
-export { createCulinaryTemplate, createCulinaryDetailTemplate, createCostumerReviewsTemplate };
+export { createCulinaryTemplate, createCulinaryDetailTemplate, createCostumerReviewsTemplate }

@@ -1,12 +1,11 @@
-import UrlParser from "../../routes/url-parser";
-import TheCulinarySource from "../../data/theculinary-source";
-import { createCostumerReviewsTemplate, createCulinaryDetailTemplate } from "../templates/templates-creator";
-import { createLikeButtonTemplate, createLikedButtonTemplate} from "../templates/template-button";
-import LikeButtonInitiator from "../../utils/like-button-initiator";
+import UrlParser from '../../routes/url-parser'
+import TheCulinarySource from '../../data/theculinary-source'
+import { createCostumerReviewsTemplate, createCulinaryDetailTemplate } from '../templates/templates-creator'
+import LikeButtonInitiator from '../../utils/like-button-initiator'
 
 const DetailMenu = {
-    async render() {
-        return `
+  async render () {
+    return `
             <div class="culinary_container">
                 <div id="culinary">
                     <!-- Loader -->
@@ -25,26 +24,26 @@ const DetailMenu = {
 
                 <div id="likeButtonContainer"></div>
             </div>
-        `;
-    },
+        `
+  },
 
-    async afterRender() {
-        const url = UrlParser.parseActiveUrlWithoutCombiner();
-        const culinary = await TheCulinarySource.detailMenu(url.id);
-        const culinaryContainer = document.querySelector("#culinary");
-        culinaryContainer.innerHTML = createCulinaryDetailTemplate(culinary);
+  async afterRender () {
+    const url = UrlParser.parseActiveUrlWithoutCombiner()
+    const culinary = await TheCulinarySource.detailMenu(url.id)
+    const culinaryContainer = document.querySelector('#culinary')
+    culinaryContainer.innerHTML = createCulinaryDetailTemplate(culinary)
 
-        
-        const reviewContainer =  document.querySelector("#costumer-reviews");
-        culinary.customerReviews.map(review => {
-            reviewContainer.innerHTML += createCostumerReviewsTemplate(review);
-        });
+    const reviewContainer = document.querySelector('#costumer-reviews')
+    // eslint-disable-next-line array-callback-return
+    culinary.customerReviews.map((review) => {
+      reviewContainer.innerHTML += createCostumerReviewsTemplate(review)
+    })
 
-        LikeButtonInitiator.init({
-            likeButtonContainer: document.querySelector("#likeButtonContainer"),
-            menu: culinary
-        })
-    },
-};
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      menu: culinary
+    })
+  }
+}
 
-export default DetailMenu;
+export default DetailMenu
