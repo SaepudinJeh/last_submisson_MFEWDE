@@ -6,6 +6,10 @@ const SearchMenu = {
     return `
             <h1 id="heading-menu">Menu Favorite</h1>
             <div id="card-list"></div>
+
+             <footer>
+                <p>Copyright © 2020 - Makan-makan</p>
+            </footer>
         `
   },
 

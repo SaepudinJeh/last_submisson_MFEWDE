@@ -13,6 +13,10 @@ const MenuList = {
             </div>
             <h1 id="heading-menu">Semua menu</h1>
             <div id="card-list"></div>
+
+             <footer>
+                <p>Copyright © 2021 - Makan-makan</p>
+            </footer>
         `
   },
 

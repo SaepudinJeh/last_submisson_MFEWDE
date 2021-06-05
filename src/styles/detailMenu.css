@@ -65,7 +65,7 @@
 }
 
 .review_container {
-  margin: 0 auto;
+  margin-bottom: 35px;
   width: 100%;
   max-width: 1000px;
 }
