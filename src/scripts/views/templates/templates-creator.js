@@ -21,7 +21,7 @@ const categoryMenu = (culinary) => culinary.categories.map(category => `<span>${
 
 const createCulinaryDetailTemplate = (culinary) => `
 <div class="culinary_content">
-    <img class="lazyload" class="culinary_poster" src="${CONFIG.BASE_IMG_MEDIUM + culinary.pictureId}" alt="${culinary.name}" />
+    <img class="culinary_poster" src="${CONFIG.BASE_IMG_MEDIUM + culinary.pictureId}" alt="${culinary.name}" />
     <div class="culinary_info">
         <h1 class="culinary_title">${culinary.name}</h1>
         <h3>Kota</h3>

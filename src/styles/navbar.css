@@ -18,7 +18,7 @@
   justify-content: space-between;
 }
 
-.navbar li {
+.menu-list ul {
   display: inline-flex;
 }
 
@@ -74,7 +74,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navbar .menu-list {
+  .menu-list {
     position: fixed;
     top: 0;
     left: -100%;
@@ -82,13 +82,16 @@
     width: 100%;
     max-width: 300px;
     background-color: #222;
-    display: block;
-    padding: 40px 0;
-    text-align: center;
     transition: all 0.5s ease;
   }
 
-  .navbar .menu-list.active {
+  .menu-list ul {
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .menu-list.active {
     left: 0%;
   }
 
