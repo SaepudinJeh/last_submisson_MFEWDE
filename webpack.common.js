@@ -65,6 +65,9 @@ module.exports = {
     new ServiceWorkerPlugin({
       entry: path.resolve(__dirname, 'src/scripts/sw.js')
     }),
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+      analyzerMode: 'static'
+    })
   ]
 }
