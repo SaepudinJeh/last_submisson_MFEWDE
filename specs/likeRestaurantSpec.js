@@ -1,7 +1,7 @@
 import LikeButtonInitiator from '../src/scripts/utils/like-button-initiator'
 import FavoriteMenuIdb from '../src/scripts/data/idb'
 
-describe('Liking A menu', () => {
+describe('Liking A Menu Restaurant', () => {
   const addLikeButtonContainer = () => {
     document.body.innerHTML = '<div id="likeButtonContainer"></div>'
   }
@@ -54,7 +54,7 @@ describe('Liking A menu', () => {
   })
 
   // sebaiknya tidak menambahkan menu lagi ketika sudah disukai
-  it('should not add a movie again when its already liked', async () => {
+  it('should not add a menu again when its already liked', async () => {
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       menu: {
@@ -75,7 +75,7 @@ describe('Liking A menu', () => {
   })
 
   // harusnya tidak menambahkan menu ketika tidak memiliki id
-  xit('should not add a movie when it has no id', async () => {
+  xit('should not add a menu when it has no id', async () => {
     await LikeButtonInitiator.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       menu: {}
