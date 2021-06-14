@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "test": "karma start"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
@@ -20,12 +21,20 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "html-webpack-plugin": "4.3.0",
+    "jasmine-ajax": "^4.0.0",
+    "jasmine-core": "^3.7.1",
+    "karma": "^6.3.4",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-jasmine": "^4.0.1",
+    "karma-sourcemap-loader": "^0.3.8",
+    "karma-webpack": "^5.0.0",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^5.0.9"
+    "webpack-merge": "^5.0.9",
+    "whatwg-fetch": "^3.6.2"
   },
   "dependencies": {
     "idb": "^6.1.2",
