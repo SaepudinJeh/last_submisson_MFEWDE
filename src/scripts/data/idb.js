@@ -11,6 +11,10 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 
 const FavoriteMenuIdb = {
   async getMenu (id) {
+    if (!id) {
+      return
+    }
+
     return (await dbPromise).get(OBJECT_STORE_NAME, id)
   },
 
@@ -19,6 +23,11 @@ const FavoriteMenuIdb = {
   },
 
   async putMenu (menu) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (!menu.hasOwnProperty('id')) {
+      return
+    }
+
     return (await dbPromise).put(OBJECT_STORE_NAME, menu)
   },
 
