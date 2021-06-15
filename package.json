@@ -7,12 +7,14 @@
   "scripts": {
     "start-dev": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "test": "karma start"
+    "test": "karma start",
+    "e2e": "codeceptjs run --steps"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
     "babel-loader": "^8.1.0",
+    "codeceptjs": "2.6.7",
     "copy-webpack-plugin": "^6.0.2",
     "css-loader": "^3.6.0",
     "eslint": "^7.26.0",
@@ -28,6 +30,7 @@
     "karma-jasmine": "^4.0.1",
     "karma-sourcemap-loader": "^0.3.8",
     "karma-webpack": "^5.0.0",
+    "puppeteer": "5.2.1",
     "style-loader": "^1.2.1",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^4.4.2",
