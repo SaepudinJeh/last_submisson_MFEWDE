@@ -3,7 +3,7 @@ import CONFIG from '../../globals/config'
 const createCulinaryTemplate = (culinary) => `
     <div class="cards">
         <figure class="card-image">
-            <img class="lazyload" src="${CONFIG.BASE_IMG_SMALL + culinary.pictureId}" alt="${culinary.name}">
+            <img class="lazyload" data-src="${CONFIG.BASE_IMG_SMALL + culinary.pictureId}" alt="${culinary.name}">
             <figcaption class="badge-city">${culinary.city}</figcaption>
         </figure>
 
@@ -21,7 +21,7 @@ const categoryMenu = (culinary) => culinary.categories.map(category => `<span>${
 
 const createCulinaryDetailTemplate = (culinary) => `
 <div class="culinary_content">
-    <img class="culinary_poster" src="${CONFIG.BASE_IMG_MEDIUM + culinary.pictureId}" alt="${culinary.name}" />
+    <img class="lazyload culinary_poster" data-src="${CONFIG.BASE_IMG_MEDIUM + culinary.pictureId}" alt="${culinary.name}" />
     <div class="culinary_info">
         <h1 class="culinary_title">${culinary.name}</h1>
         <h3>Kota</h3>

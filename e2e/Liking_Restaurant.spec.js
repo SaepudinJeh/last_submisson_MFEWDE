@@ -35,11 +35,11 @@ Scenario('Unliking one menu Restaurant', async (I) => {
   I.amOnPage('/#/favorite')
   I.seeElement('.cards')
   const likedRestaurantName = await I.grabTextFrom('.card-info a')
-  I.click(firstMenuRestaurantName)
-
   assert.strictEqual(firstMenuRestaurantName, likedRestaurantName)
+  I.click(likedRestaurantName)
 
   I.seeElement('#likeButton')
   I.click('#likeButton')
-  pause()
+
+  I.amOnPage('/#/favorite')
 })
