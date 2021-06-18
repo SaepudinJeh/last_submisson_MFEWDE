@@ -5,15 +5,7 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox
 workbox.precaching.precacheAndRoute(
   [
     {
-      url: '/',
-      revision: 1
-    },
-    {
       url: 'https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap',
-      revision: 1
-    },
-    {
-      url: 'https://use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2',
       revision: 1
     }
   ],
@@ -46,6 +38,13 @@ workbox.routing.registerRoute(
         maxAgeSecmaxAgeSeconds: 60 * 60 * 24 * 30 * 2
       })
     ]
+  })
+)
+
+workbox.routing.registerRoute(
+  ({ url }) => url.origin === 'https://use.fontawesome.com/releases/v4.7.0/fonts/fontawesome-webfont.woff2',
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'fonts-awesome-css'
   })
 )
 

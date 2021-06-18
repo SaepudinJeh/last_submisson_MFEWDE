@@ -14,7 +14,7 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'all',
-      minSize: 20000,
+      minSize: 30000,
       maxSize: 70000,
       minChunks: 1,
       maxAsyncRequests: 30,
@@ -52,7 +52,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'src/templates/index.html'),
-      filename: 'index.html'
+      filename: 'index.html',
+      inject: {
+        default: 'body',
+        entries: {
+          app: ['module', 'async'],
+          vendor: 'module',
+          thirdparty: 'head'
+        }
+      }
     }),
     new CopyWebpackPlugin({
       patterns: [

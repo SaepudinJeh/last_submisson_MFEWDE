@@ -7,8 +7,8 @@ const MenuList = {
             <div class="hero-container">
                 <figure class="hero-image">
                   <picture>
-                    <source media="(max-width: 600px)" srcset="images/hero-image-small.jpg">
-                    <img src="images/hero-image-large.jpg" alt="image-hero">
+                    <source media="(max-width: 600px)" data-srcset="images/hero-image-small.jpg" data-sizes="auto" class="lazyload">
+                    <img class="lazyload" data-src="images/hero-image-large.jpg" alt="image-hero">
                   </picture>
                   <figcaption>
                     <h1>Makan-makan Apps</h1>
