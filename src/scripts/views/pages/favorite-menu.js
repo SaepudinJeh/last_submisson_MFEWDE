@@ -12,6 +12,14 @@ const SearchMenu = {
   async afterRender () {
     const culinary = await FavoriteMenuIdb.getAllMenu()
     const culinaryContainer = document.querySelector('#card-list')
+    const headingContainer = document.querySelector('#heading-menu')
+    if (culinary.length === 0) {
+      headingContainer.innerHTML = `
+        <div class="restaurant-not-found">
+          <div class="message-not-found">Tidak ada menu favorit</div>
+        </div>
+      `
+    }
     culinary.forEach(menu => {
       culinaryContainer.innerHTML += createCulinaryTemplate(menu)
     })

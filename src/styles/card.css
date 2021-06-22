@@ -68,6 +68,16 @@
   font-weight: 800;
 }
 
+/* Restaurant Not Found */
+.restaurant-not-found {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 auto;
+  text-align: center;
+}
+/* Restaurant Not Found */
+
 @media screen and (min-width: 650px) {
   #card-list {
     margin-top: 40px;
